@@ -1,0 +1,72 @@
+# Local .terraform directories
+deployment/.terraform/
+
+# .tfstate files
+deployment/*.tfstate
+deployment/*.tfstate.*
+
+# Crash log files
+deployment/crash.log
+deployment/crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as
+# password, private keys, and other secrets. These should not be part of version 
+# control as they are data points which are potentially sensitive and subject 
+# to change depending on the environment.
+deployment/*.tfvars
+deployment/*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+deployment/override.tf
+deployment/override.tf.json
+deployment/*_override.tf
+deployment/*_override.tf.json
+
+# Ignore transient lock info files created by terraform apply
+deployment/.terraform.tfstate.lock.info
+
+# Include override files you do wish to add to version control using negated pattern
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+
+# Ignore CLI configuration files
+deployment/.terraformrc
+deployment/terraform.rc
+
+*.env
+
+
+# From vite .gitignore
+
+# Logs
+/src/s3/*/logs
+/src/s3/*/*.log
+/src/s3/*/npm-debug.log*
+/src/s3/*/yarn-debug.log*
+/src/s3/*/yarn-error.log*
+/src/s3/*/pnpm-debug.log*
+/src/s3/*/lerna-debug.log*
+
+/src/s3/*/node_modules
+/src/s3/*/dist
+/src/s3/*/dist-ssr
+/src/s3/*/*.local
+
+# Editor directories and files
+/src/s3/*/.vscode/*
+/src/s3/*/!.vscode/extensions.json
+/src/s3/*/.idea
+/src/s3/*/.DS_Store
+/src/s3/*/*.suo
+/src/s3/*/*.ntvs*
+/src/s3/*/*.njsproj
+/src/s3/*/*.sln
+/src/s3/*/*.sw?
+
+
+**/node_modules
+
+src/lambda/api/sampleresponses/
