@@ -10,7 +10,7 @@
 
 - `TabId : string` ID of the tab (Partition key)
 - `GroupName : string` Name of a group (Sort key)
-- `GroupMembersJSON : string` Stringified JSON of group members, using schema of `GroupData` type. Individual members are represented with their singleton group
+- `GroupDataJSON : string` Stringified JSON of group data. From the `GroupData` type
 
 ## tab-shops
 
