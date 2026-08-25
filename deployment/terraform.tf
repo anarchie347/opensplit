@@ -6,3 +6,15 @@ terraform {
       }
     }
 }
+
+variable "environment" {
+    description = "Deployment environment name"
+    default = "prod"
+    type = string
+}
+
+variable "project_name" {
+  description = "Project name"
+  default = "opensplit"
+  type = string
+}

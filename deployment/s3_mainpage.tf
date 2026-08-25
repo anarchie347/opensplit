@@ -1,8 +1,8 @@
 // bucket to store static webpage
 resource "aws_s3_bucket" "mainpage" {
-  bucket_prefix = "reciept-split-website"
+  bucket_prefix = "${var.project_name}-${var.environment}-website"
   tags = {
-    Name = "reciept-split"
+    Name = "${var.project_name}-${var.environment}-website"
   }
 }
 

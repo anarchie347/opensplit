@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "api" {
-  function_name = "receipt-split-api"
+  function_name = "${var.project_name}-${var.environment}-api"
   runtime = "nodejs22.x"
   handler = "api.handler"
 
@@ -21,8 +21,8 @@ resource "aws_lambda_function" "api" {
 
 resource "aws_iam_role" "lambda_api_role" {
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_role_policy_doc.json
-  description = "Role with permissions for receipt-split-api"
-  name = "receipt-split-api"
+  description = "Role with permissions for Lambda ${var.project_name}-${var.environment}-api"
+  name = "${var.project_name}-${var.environment}-api"
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_api_attach_logs" {
