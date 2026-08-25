@@ -1,6 +1,8 @@
-# Receipt Splitter
+# OpenSplit
 
-A simple web app to ease with splitting the costs of a receipt between people.
+A web app to track expenses in a group of people, with support for uploading reciepts and easy per-item splitting
+
+This is based on [my reciept-splitter app](https://github.com/anarchie347/receipt-split)
 
 All deployed on AWS Cloudfront,S3 and Lambda.
 
