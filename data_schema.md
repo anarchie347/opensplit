@@ -19,3 +19,4 @@
 - `Name : string` User-facing name of the transaction. Dependent on `ShopJSON`, used for lookups where only the name is needed
 - `Price : int` Price in pennies. Dependent on `ShopJSON`, used for lookups where only the price is needed
 - `ShopJSON : Shop` JSON object of all the data for the shop
+- `Version : int` Logical timestamp for version number. Used to prevent lost writes

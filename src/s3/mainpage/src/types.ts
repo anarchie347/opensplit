@@ -22,3 +22,9 @@ export type ShopData = {
   items: Item[];
   moneyOwed: Shares;
 };
+
+export type ShopOverview = {
+  Name: string;
+  paidBy: string;
+  totalPaid: number;
+};
