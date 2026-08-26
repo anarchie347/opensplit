@@ -37,3 +37,13 @@ resource "aws_lambda_permission" "api_api_access" {
   principal = "apigateway.amazonaws.com"
   source_arn = "${aws_apigatewayv2_api.api.execution_arn}/*/*"
 }
+
+resource "aws_iam_role_policy_attachment" "lambda_api_attach_db_tabmembers" {
+  role = aws_iam_role.lambda_api_role.name
+  policy_arn = aws_iam_policy.dyanamodb_tabmembers_rw_policy.arn
+}
+
+resource "aws_iam_role_policy_attachment" "lambda_api_attach_db_tabitems" {
+  role = aws_iam_role.lambda_api_role.name
+  policy_arn = aws_iam_policy.dyanamodb_tabitems_rw_policy.arn
+}
